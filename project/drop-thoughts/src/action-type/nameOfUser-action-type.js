@@ -1,0 +1,1 @@
+export const NAME_OF_USER = "NAME_OF_USER"
