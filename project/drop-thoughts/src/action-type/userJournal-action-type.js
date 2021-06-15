@@ -1,0 +1,1 @@
+export const USER_JOURNAL = "USER_JOURNAL"
