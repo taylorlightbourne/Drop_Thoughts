@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Login = () => {
 
@@ -23,7 +23,7 @@ const Login = () => {
                             <button type="submit" id="submit__btn">Login</button>
                         </div>
                     </form>
-                    <Link to="">
+                    <Link to="/register">
                         <p>New User? Create an Account Here</p>
                     </Link>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const Register = () => {
     return (
     <div className="main-container">
@@ -10,20 +10,12 @@ const Register = () => {
             </div>
             <form>
                 <div>
-                    <label><b>First Name:</b></label>
-                    <input type="text" name="firstName" id="floatingInput" required></input> 
-                </div>
-                <div>
-                    <label><b>Last Name:</b></label>
-                    <input type="text" name="lastName" id="floatingInput" required></input> 
+                    <label><b>Username: </b></label>
+                    <input type="text" name="username" id="floatingInput" required></input>
                 </div>
                 <div>
                     <label><b>Email: </b></label>
                     <input type="text" name="email" id="floatingInput" required></input>
-                </div>
-                <div>
-                    <label><b>Username: </b></label>
-                    <input type="text" name="username" id="floatingInput" required></input>
                 </div>
                 <div>
                     <label><b>Password: </b></label>
@@ -33,9 +25,12 @@ const Register = () => {
                     <button type="submit" id="submit__btn">Create Account</button>
                 </div>
             </form>
-            <Link to="">
+            <Link to="/login">
                 <p>Already Have an Account? Login Here</p>
             </Link>
+            
+
+            
         </div>
     </div>
     )
