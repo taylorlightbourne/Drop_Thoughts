@@ -1,16 +1,14 @@
 import React from 'react';
 
-const AboutUs = () => {
-    
+const Journal = () => {
     return (
     <div className="main-container">
         <div class="main contents">
             <div className="header">
-                <h1>About Us </h1>
+                <h1>Journal</h1>
             </div>
         </div>
     </div>
     )
 };
-
-export default AboutUs;
+export default Journal;

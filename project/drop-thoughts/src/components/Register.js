@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './LoginRegister.css';
+
 const Register = () => {
+
     return (
     <div className="main-container">
-        <div class="main contents">
+        <div className="main-contents">
             <div className="header">
                 <h1>Sign Up</h1>
                 <p>Please fill in this form to create an account.</p>
@@ -28,9 +31,6 @@ const Register = () => {
             <Link to="/login">
                 <p>Already Have an Account? Login Here</p>
             </Link>
-            
-
-            
         </div>
     </div>
     )

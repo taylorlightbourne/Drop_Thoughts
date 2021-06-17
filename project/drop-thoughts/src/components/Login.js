@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import '../components/LoginRegister.css';
 
 const Login = () => {
 
     return (
         <div className="main-container">
-                <div class="main contents">
+                <div className="main-contents">
                     <div className="header">
                         <h1>Login</h1>
                         <p>Please sign into your account.</p>
