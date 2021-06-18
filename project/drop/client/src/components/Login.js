@@ -1,9 +1,20 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { useEffect } from 'react';
 import '../components/LoginRegister.css';
 
 const Login = () => {
+    useEffect(() => {
+    Inspiration();
+    }, []);
 
+    const Inspiration = async () => {
+    const response = await fetch("http://quotes.rest/qod.json", {
+    headers: { Accept: "application/json" },
+    });
+    const parsedData = await response.json();
+    console.log(parsedData.contents.quotes[0].author)
+    };
     return (
         <div className="main-container">
                 <div className="main-contents">
