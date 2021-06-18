@@ -1,4 +1,4 @@
-import NAME_OF_USER from "../action-type/nameOfUser-action-type"
+import { NAME_OF_USER } from "../action-types/nameOfUser-action-type"
 const initialstate = ""
 
 const nameOfUser = (state = initialstate, action) => {

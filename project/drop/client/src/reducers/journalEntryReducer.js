@@ -1,4 +1,4 @@
-import USER_JOURNAL from "../action-type/userJournal-action-type"
+import { USER_JOURNAL } from "../action-types/userJournal-action-type"
 const initialstate = ""
 
 const nameOfUser = (state = initialstate, action) => {
