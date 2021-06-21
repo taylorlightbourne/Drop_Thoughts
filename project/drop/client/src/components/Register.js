@@ -19,7 +19,7 @@ const Register = () => {
                 <h1>Sign Up</h1>
                 <p>Please fill in this form to create an account.</p>
             </div>
-            <form action="POST">
+            <form onSubmit={(e) => Registration(dispatch, username, password, email,e)}>
                 <div>
                     <label><b>Username: </b></label>
                     <input type="text" name="username" id="floatingInput" onChange={(e) => setUserName(e.target.value)} required></input>
@@ -33,7 +33,7 @@ const Register = () => {
                     <input type="text" name="email" id="floatingInput" onChange={(e) => setEmail(e.target.value)} required></input>
                 </div>
                 <div className="submit__btn">
-                    <button type="submit" id="submit__btn" onClick={(e) => Registration(dispatch, username, password, email)}>Create Account</button>
+                    <button type="submit" id="submit__btn" >Create Account</button>
                 </div>
             </form>
             <Link to="/login">

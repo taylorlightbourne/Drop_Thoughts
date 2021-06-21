@@ -22,7 +22,7 @@ const Login = () => {
                         <h1>Login</h1>
                         <p>Please sign into your account.</p>
                     </div>
-                    <form>
+                    <form action="http://localhost:3001/login" method="POST">
                         <div>
                             <label><b>Email: </b></label>
                             <input type="text" name="email" id="floatingInput" required></input>
