@@ -3,6 +3,8 @@ import MainPage from './components/MainPage';
 import AboutUs from "./components/AboutUs"
 import Login from "./components/Login"
 import Register from './components/Register';
+import CalendarApp from './components/Calendar/CalendarApp'
+import ErrorPage from './components/ErrorPage';
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,6 +32,18 @@ function App() {
 
           <Route path="/aboutUs">
             <AboutUs/>
+          </Route>
+          
+          <Route path="/calendar">
+            <CalendarApp/>
+          </Route>
+
+          <Route path="/error">
+            <ErrorPage/>
+          </Route>
+
+          <Route path="*" >
+            <Redirect to ="/Error" />
           </Route>
 
         </Switch>
