@@ -1,4 +1,5 @@
-import { Send_Back_Response } from '../action-types/ResponseType'
+  
+import { Send_Back_Response } from "../action-type/ResponseType"
 
 const intialState = [{computer:{response:"How you feeling my boy?"}}]
 
