@@ -5,6 +5,7 @@ import Login from "./components/Login"
 import Register from './components/Register';
 import CalendarApp from './components/Calendar/CalendarApp'
 import ErrorPage from './components/ErrorPage';
+import HelpPage from './components/HelpPage';
 import {
   BrowserRouter as Router,
   Switch,
@@ -36,6 +37,10 @@ function App() {
           
           <Route path="/calendar">
             <CalendarApp/>
+          </Route>
+
+          <Route path="/help">
+            <HelpPage/>
           </Route>
 
           <Route path="/error">
