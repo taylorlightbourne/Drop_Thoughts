@@ -9,7 +9,7 @@ import { Emotions } from '../actions/SaveAction';
 const SUPABASE_KEY = process.env.REACT_APP_SUPABASE_KEY
 const url = "https://bmfrpwptdmmebjwjsfcj.supabase.co";
 
-const supabase =  createClient(url,SUPABASE_KEY);
+const supabase = createClient(url, SUPABASE_KEY);
 
 const MainPage = () => {
     const dispatch = useDispatch()
@@ -17,37 +17,37 @@ const MainPage = () => {
     const Response = useSelector(state => state.Respond)
     console.log(Response)
 
-    const [mood,setMood ] = useState("")
+    const [mood, setMood] = useState("")
     const [response, setResponse] = useState("")
 
     const SupabaseSave = async () => {
         setResponse()
         const { data, error } = await supabase
-    .from('Post')
-    .insert([
-    { mood: mood , respond: Response[0].computer.response, ai: Response[0].bot.ai }
-    ])
+            .from('Post')
+            .insert([
+                { mood: mood, respond: Response[0].computer.response, ai: Response[0].bot.ai }
+            ])
     };
     return (
-    <div className="main-container">
-        <div className="main contents">
-            <div className="header">
-                <h1>Drop Thoughts</h1>
-            </div>
+        <div className="main-container">
+            <div className="main contents">
+                <div className="header">
+                    <h1>Drop Thoughts</h1>
+                </div>
                 <div className="message__box">
-                    <input placeholder="How Are You Feeling Today?" name="url" onChange={(e) => setMood( e.target.value)}></input>
+                    <input placeholder="How Are You Feeling Today?" name="url" onChange={(e) => setMood(e.target.value)}></input>
                 </div>
 
                 <div className="submit__btn">
-                    <button  type="button" id="submit__btn" onClick={(e) => AnalyzeTone(dispatch, mood)}>Submit</button>
+                    <button type="button" id="submit__btn" onClick={(e) => AnalyzeTone(dispatch, mood)}>Submit</button>
                 </div>
-            <form>
-                <div className="save__btn">
-                    <button  type="button" id="save__btn" onClick={(e) => SupabaseSave()}>Save</button>
-                </div>
+                <form>
+                    <div className="save__btn">
+                        <button type="button" id="save__btn" onClick={(e) => SupabaseSave()}>Save</button>
+                    </div>
 
-            </form>
-        </div>
+                </form>
+            </div>
         </div>
 
     )
