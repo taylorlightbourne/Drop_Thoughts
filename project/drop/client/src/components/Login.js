@@ -1,9 +1,20 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { useEffect } from 'react';
 import '../components/LoginRegister.css';
 
 const Login = () => {
+    useEffect(() => {
+    Inspiration();
+    }, []);
 
+    const Inspiration = async () => {
+    const response = await fetch("http://quotes.rest/qod.json", {
+    headers: { Accept: "application/json" },
+    });
+    const parsedData = await response.json();
+    console.log(parsedData.contents.quotes[0].author)
+    };
     return (
         <div className="main-container">
                 <div className="main-contents">
@@ -11,7 +22,7 @@ const Login = () => {
                         <h1>Login</h1>
                         <p>Please sign into your account.</p>
                     </div>
-                    <form>
+                    <form action="http://localhost:3001/login" method="POST">
                         <div>
                             <label><b>Email: </b></label>
                             <input type="text" name="email" id="floatingInput" required></input>
