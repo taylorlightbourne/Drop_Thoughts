@@ -3,15 +3,14 @@ const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt')
 
 function intialize(passport) {
-  const authenticateUser = async (username, password, done) => {
-
+  const authenticateUser = async (email, password, done) => {
 
     try {
       // check in your database if the user exist
       // const user = await User.findOne()
 
-        const users = await client.query('SELECT * FROM users ' 'Where ' );
-
+        const email = await client.query('SELECT * FROM users Where email=$1',
+        [email] );
 
       if (await bcrypt.compare(password, user.password)) {
         return done(null, user)
