@@ -1,10 +1,10 @@
 import React from 'react';
 
 const AboutUs = () => {
-    
+
     return (
     <div className="main-container">
-        <div class="main contents">
+        <div className="main contents">
             <div className="header">
                 <div className="aboutUs">
                 <h1>About Us </h1>
@@ -18,7 +18,7 @@ const AboutUs = () => {
                 <h1>Our Team</h1>
                 <div className="plillipAboutMe">
                     <p>Phillip Francis</p>
-                    <img 
+                    <img
                     alt=""
                     src="https://www.pngitem.com/pimgs/m/421-4213053_default-avatar-icon-hd-png-download.png"
                     height="150"
@@ -40,7 +40,7 @@ const AboutUs = () => {
                 </div>
                 <div className="taylorAboutMe">
                     <p>Taylor LightBourne</p>
-                    <img 
+                    <img
                     alt=""
                     src="https://www.pngitem.com/pimgs/m/421-4213053_default-avatar-icon-hd-png-download.png"
                     height="150"/>
@@ -62,7 +62,7 @@ const AboutUs = () => {
                 <div className="nischalAboutMe">
                     <p>Nischal Pahari</p>
                     <img
-                    alt="" 
+                    alt=""
                     src="https://www.pngitem.com/pimgs/m/421-4213053_default-avatar-icon-hd-png-download.png"
                     height="150"/>
                     <a href="https://www.linkedin.com/in/nischal-pahari-/">
@@ -80,7 +80,7 @@ const AboutUs = () => {
                     />
                     </a>
                 </div>
-                
+
                 </div>
             </div>
         </div>
