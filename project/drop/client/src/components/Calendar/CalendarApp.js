@@ -9,24 +9,18 @@ import './Calendar.css'
 const CalendarApp = () => {
   const [nav, setNav] = useState(0);
   const [clicked, setClicked] = useState();
-  const [events, setEvents] = useState(
-    localStorage.getItem('events') ? 
-      JSON.parse(localStorage.getItem('events')) : 
-      []
-  )
+  const [events, setEvents] = useState([])
+
 
   const eventForDate = date => events.find(e => e.date === date)
 
-  useEffect(() => {
-    localStorage.setItem('events', JSON.stringify(events))
-  }, [events])
-
   const { days, dateDisplay } = useDate(events, nav)
 
-  return(
+  return (
+
     <>
       <div id="container">
-        <CalendarHeader 
+        <CalendarHeader
           dateDisplay={dateDisplay}
           onNext={() => setNav(nav + 1)}
           onBack={() => setNav(nav - 1)}
@@ -62,7 +56,7 @@ const CalendarApp = () => {
         <NewEventModal
           onClose={() => setClicked(null)}
           onSave={title => {
-            setEvents([ ...events, { title, date: clicked }])
+            setEvents([...events, { title, date: clicked }])
             setClicked(null);
           }}
         />
@@ -70,7 +64,7 @@ const CalendarApp = () => {
 
       {
         clicked && eventForDate(clicked) &&
-        <DeleteEventModal 
+        <DeleteEventModal
           eventText={eventForDate(clicked).title}
           onClose={() => setClicked(null)}
           onDelete={() => {
