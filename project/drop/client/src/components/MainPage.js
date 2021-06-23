@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { addMessage } from '../actions/MessageAction'
 import { AnalyzeTone } from '../actions/ToneAction'
@@ -18,6 +19,17 @@ const MainPage = () => {
 const convo = text.length === 0 ? {} : text
 
 
+        const dispatch = useDispatch()
+        const text = useSelector((state) => state.Tone)
+      
+        const Response = useSelector(state => state.Respond)
+        console.log({Response})
+        const firstCpuResp = Response[0].computer.response
+        console.log("firstCpuResp",firstCpuResp)
+      
+        const [input,setInput ] = useState("")
+      const convo = text.length === 0 ? {} : text
+
     return (
     <div className="main-container">
         <div className="main contents">
@@ -35,9 +47,11 @@ const convo = text.length === 0 ? {} : text
                 <div className="save__btn">
                     <button  type="button" id="save__btn">Save</button>
                 </div>
+                
             </form>
         </div>
         </div>
+
     )
 };
 

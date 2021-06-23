@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Journal = () => {
+    const [quote, setQuote] = useState("")
+
+
+    useEffect(() =>{
+        const getDefaultValues = async () =>{
+            const response = await fetch ("https://quotes.rest/qod.json")
+        }
+    })
+
     return (
     <div className="main-container">
         <div className="main contents">
