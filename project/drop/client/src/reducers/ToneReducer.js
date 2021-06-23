@@ -3,7 +3,7 @@ import { Get_Message } from "../action-type/MessageType"
 import { Send_Back_Response } from "../action-type/ResponseType"
 
 
-const intialState = [{computer:[{response: "How you feeling my boy"}]}, {user:[{response: "I am so sad"}]}]
+const intialState = [{}]
 
 const Tone = (state = intialState, action) => {
   switch(action.type) {

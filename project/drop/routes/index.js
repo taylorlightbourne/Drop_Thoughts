@@ -88,6 +88,21 @@ router.delete("/remove/:id", async function(req, res, next){
     }
 });
 
+// Main
+
+router.post('/newMood', async function(req, res, next){
+    console.log("sending mood to db")
+    try {
+        const { url, response, created_at } = req.body;
+
+        const results = await client.query("INSERT INTO users (url,response,created_at) VALUES ($1, $2, $3)",
+        [url, response, created_at]
+        )
+    } catch (err) {
+        console.log(err);
+    }
+});
+
 // Login
 
 router.post('/login', passport.authenticate('local', {

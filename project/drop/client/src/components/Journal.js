@@ -12,7 +12,7 @@ const Journal = () => {
 
     return (
     <div className="main-container">
-        <div class="main contents">
+        <div className="main contents">
             <div className="header">
                 <h1>Journal</h1>
             </div>
