@@ -1,9 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import '../components/LoginRegister.css';
+import InspoCard from "./InspoCard";
+import footerDesign from '../Assets/FooterDesign.png'
 
 const Login = () => {
+    const [quote, setQuote] = useState("")
+    const [author, setAuthor] = useState("")
+
     useEffect(() => {
     Inspiration();
     }, []);
@@ -14,23 +19,27 @@ const Login = () => {
     });
     const parsedData = await response.json();
     console.log(parsedData.contents.quotes[0].author)
+    setQuote(parsedData.contents.quotes[0].quote)
+    setAuthor(parsedData.contents.quotes[0].author)
+
     };
     return (
         <div className="main-container">
                 <div className="main-contents">
                     <div className="header">
-                        <h1>Login</h1>
-                        <p>Please sign into your account.</p>
+                        <h1 id="login">Login</h1>
+                        <p id="p_notice">Please sign into your account.</p>
                     </div>
+                    <br></br>
                     <form action="http://localhost:3001/login" method="POST">
-                        <div>
-                            <label><b>Email: </b></label>
+                        <div className="email__input">
                             <input type="text" name="email" id="floatingInput" required></input>
                         </div>
-                        <div>
-                            <label><b>Password: </b></label>
+                        <br></br>
+                        <div className="password__input">
                             <input type="password" name="password" id="floatingInput" required></input>
                         </div>
+                        <br></br>
                         <div className="submit__btn">
                             <button type="submit" id="submit__btn">Login</button>
                         </div>
@@ -38,7 +47,13 @@ const Login = () => {
                     <Link to="/register">
                         <p>New User? Create an Account Here</p>
                     </Link>
+                    <div className="quoteAPI">
+                        <InspoCard author={author} quote={quote}/>
+                    </div>
                 </div>
+                <footer>
+                    <img src={footerDesign} />
+                </footer>
             </div>
     )
 };

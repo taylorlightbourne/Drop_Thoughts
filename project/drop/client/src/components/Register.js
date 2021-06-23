@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { Registration } from '../actions/SignUpAction';
+import footerDesign from '../Assets/FooterDesign.png'
 import './LoginRegister.css';
 
 const Register = () => {
@@ -40,6 +41,9 @@ const Register = () => {
                 <p>Already Have an Account? Login Here</p>
             </Link>
         </div>
+        <footer>
+            <img src={footerDesign} />
+        </footer>
     </div>
     )
 };
