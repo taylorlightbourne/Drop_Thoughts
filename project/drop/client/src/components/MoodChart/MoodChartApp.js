@@ -1,20 +1,55 @@
-import React, {Component} from 'react'
-import { Line } from 'react-chartjs-2'
+import React from 'react'
+import { Bar } from 'react-chartjs-2'
 
-//x-ais will be dates
-//y-axis will be the different moods
 
 export default function MoodChartApp() {
     return (
-        <div >
-            <h1> Mood Chart</h1>
-            <Line
-            data={{
-                labels:["Sadness", "Joy", "Anger", "Fear", "Confident"]
-            }}
-            width={400}
-            height={600}
-            options={{}}
+
+        <div>
+            <Bar
+                data={{
+                    labels: ['Joy', 'Anger', 'Fear', 'Confident', 'Sadness'],
+                    datasets: [
+                        {
+                            label: 'Your Mood',
+                            data: [3, 2, 3, 12, 8],
+                            backgroundColor: [
+                                'rgba(255, 0, 0, 0.2)',
+                                'rgba(0, 0, 225, 0.2)',
+                                'rgba(255, 255, 0, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                            ],
+                            borderColor: [
+                                'rgba(255, 0, 0, 1)',
+                                'rgba(0, 0, 225, 1)',
+                                'rgba(255, 255, 0, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                            ],
+                            borderWidth: 2,
+                        },
+                    ],
+                }}
+                height={400}
+                width={600}
+                options={{
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [
+                            {
+                                ticks: {
+                                    beginAtZero: true,
+                                },
+                            },
+                        ],
+                    },
+                    legend: {
+                        labels: {
+                            fontSize: 60,
+                        },
+                    },
+                }}
             />
         </div>
     )

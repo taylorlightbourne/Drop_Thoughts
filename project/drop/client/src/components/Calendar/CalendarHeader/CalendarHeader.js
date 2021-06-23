@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const CalendarHeader = ({ onNext, onBack, dateDisplay }) => {
-  return(
+  return (
     <div id="header">
       <div id="monthDisplay">{dateDisplay}</div>
       <div>

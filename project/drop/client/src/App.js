@@ -6,6 +6,7 @@ import Register from './components/Register';
 import CalendarApp from './components/Calendar/CalendarApp'
 import ErrorPage from './components/ErrorPage';
 import HelpPage from './components/HelpPage';
+import MoodChartApp from './components/MoodChart/MoodChartApp'
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,40 +21,44 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <MainPage/>
+            <MainPage />
           </Route>
 
           <Route path="/register">
-            <Register/>
+            <Register />
           </Route>
 
           <Route path="/login">
-            <Login/>
+            <Login />
           </Route>
 
           <Route path="/aboutUs">
-            <AboutUs/>
+            <AboutUs />
           </Route>
-          
+
           <Route path="/calendar">
-            <CalendarApp/>
+            <CalendarApp />
           </Route>
 
           <Route path="/help">
-            <HelpPage/>
+            <HelpPage />
+          </Route>
+
+          <Route path="/moodchart">
+            <MoodChartApp />
           </Route>
 
           <Route path="/error">
-            <ErrorPage/>
+            <ErrorPage />
           </Route>
 
           <Route path="*" >
-            <Redirect to ="/Error" />
+            <Redirect to="/Error" />
           </Route>
 
         </Switch>
       </Router>
-        
+
     </div>
   );
 }
