@@ -7,6 +7,7 @@ import CalendarApp from './components/Calendar/CalendarApp'
 import ErrorPage from './components/ErrorPage';
 import HelpPage from './components/HelpPage';
 import MoodChartApp from './components/MoodChart/MoodChartApp'
+import Journal from './components/Journal'
 import {
   BrowserRouter as Router,
   Switch,
@@ -38,6 +39,10 @@ function App() {
 
           <Route path="/calendar">
             <CalendarApp />
+          </Route>
+
+          <Route path="/journal">
+            <Journal />
           </Route>
 
           <Route path="/help">

@@ -1,18 +1,75 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Bar } from 'react-chartjs-2'
 
-
+import { supabase } from "../SupabaseKey"
 export default function MoodChartApp() {
+
+    const [mood, setMood] = useState([])
+    const [moodObject, setMoodObject] = useState({})
+    useEffect(() => {
+        const moodData = async () => {
+            const { data, error } = await supabase
+                .from('Post')
+                .select()
+            const joy = []
+            const sadness = []
+            const anger = []
+            const fear = []
+            const confidence = []
+
+            for (const datum of data) {
+
+
+                if (datum.respond === "Joy") {
+
+                    joy.push(datum)
+                }
+                if (datum.respond === "Sadness") {
+                    sadness.push(datum)
+                }
+                if (datum.respond === "Anger") {
+                    anger.push(datum)
+                }
+                if (datum.respond === "Fear") {
+                    fear.push(datum)
+                }
+                if (datum.respond === "Confidence") {
+                    confidence.push(datum)
+                }
+
+            }
+            setMoodObject({
+
+                joy,
+                sadness,
+                anger,
+                fear,
+                confidence
+            })
+        }
+        moodData()
+    }, [])
+
+    const joyLength = moodObject.joy ? moodObject.joy.length : 0
+    const angerLength = moodObject.anger ? moodObject.anger.length : 0
+    const fearLength = moodObject.fear ? moodObject.fear.length : 0
+    const confidenceLength = moodObject.confidence ? moodObject.confidence.length : 0
+    const sadnessLength = moodObject.sadness ? moodObject.sadness.length : 0
     return (
 
-        <div>
+
+        < div >
             <Bar
                 data={{
                     labels: ['Joy', 'Anger', 'Fear', 'Confident', 'Sadness'],
                     datasets: [
                         {
                             label: 'Your Mood',
-                            data: [3, 2, 3, 12, 8],
+                            data: [joyLength,
+                                angerLength,
+                                fearLength,
+                                confidenceLength,
+                                sadnessLength],
                             backgroundColor: [
                                 'rgba(255, 0, 0, 0.2)',
                                 'rgba(0, 0, 225, 0.2)',

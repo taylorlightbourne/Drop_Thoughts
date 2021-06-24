@@ -3,13 +3,10 @@ import { addMessage } from '../actions/messageAction'
 import { AnalyzeTone } from '../actions/ToneAction'
 import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
-import { createClient } from "@supabase/supabase-js";
+import { SUPABASE_KEY, url, supabase } from './SupabaseKey'
 import { Emotions } from '../actions/SaveAction';
 
-const SUPABASE_KEY = process.env.REACT_APP_SUPABASE_KEY
-const url = "https://bmfrpwptdmmebjwjsfcj.supabase.co";
 
-const supabase = createClient(url, SUPABASE_KEY);
 
 const MainPage = () => {
     const dispatch = useDispatch()
