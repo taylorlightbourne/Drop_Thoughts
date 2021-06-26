@@ -1,24 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
-body{
-    font-family: 'Lexend Deca', sans-serif;
-    height: 100vh;
-    background-color: #224957;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+body {
+  font-family: "Lexend Deca", sans-serif;
+  height: 100vh;
+  background-color: #224957;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.chartHeader{
-    display: flex;
-    justify-content: center;
-    padding-top: 120px;
+.chartHeader {
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
 }
-.moodChartFooter{
-        position:fixed;
-        bottom:0px;
-        width:100%;   
+.moodChartFooter {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
 }
-.moodChartHeader{
+.moodChartHeader {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  color: white;
+}
+@media (max-width: 375px) {
+  .moodChartHeader {
     padding-bottom: 50px;
-    padding-top: 50px;
+    padding-top: 75px;
     color: white;
+  }
+  .moodChartFooter {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .moodChartHeader {
+    padding-bottom: 10px;
+    padding-top: 65px;
+    color: white;
+  }
+  .moodChartFooter {
+    display: none;
+  }
 }

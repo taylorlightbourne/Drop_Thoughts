@@ -33,7 +33,7 @@ const AboutUs = () => {
             </div>
             <h3>Phillip Francis</h3>
             <p className="role">Project Manager</p>
-            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p> */}
+            <p>My name is Phillip Francis. For the Drop Thoughts project, I worked on the backend and functionality with the help of my teammates.</p>
 
             <br></br>
             <a>
@@ -52,7 +52,7 @@ const AboutUs = () => {
             </div>
             <h3>Taylor Lightbourne</h3>
             <p className="role">Team Member</p>
-            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p> */}
+            <p>My name is Taylor Lightbourne. For the Drop Thoughts project, I worked on the CSS and design with the help of my teammates.</p>
             <br></br>
             <a>
               <FontAwesomeIcon icon="link" size="2x" />
@@ -70,7 +70,7 @@ const AboutUs = () => {
             </div>
             <h3>Nischal Pahari</h3>
             <p className="role">Team Member</p>
-            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quaerat tempora, voluptatum quas facere dolorum aut cumque nihil nulla harum nemo distinctio quam blanditiis dignissimos.</p> */}
+            <p>My name is Nischal Pahari. For the Drop Thoughts project, I worked on the functionality with the help of my teammates.</p>
             <br></br>
             <a>
               <FontAwesomeIcon icon="link" size="2x" />

@@ -23,9 +23,7 @@ export const AnalyzeTone = async (dispatch, payload) => {
     }
   });
   const results = await analyze.json();
-  // console.log(results)
   let response = results.document_tone.tones[0].tone_name
-  console.log(response)
 
   if (response === "Sadness") {
     ai = "I'm sorry to hear that your sad 😢 hopefully you feel better soon my boy"
@@ -42,7 +40,7 @@ export const AnalyzeTone = async (dispatch, payload) => {
   } else {
     ai = "Hmmm a interesting response 🤨"
   }
-  console.log(Response)
   dispatch({ type: Send_Back_Response, payload: { computer: { response }, bot: { ai } } })
   dispatch({ type: Get_Message, payload: { userMessage: payload } })
+  alert("Emotion Sent");
 };

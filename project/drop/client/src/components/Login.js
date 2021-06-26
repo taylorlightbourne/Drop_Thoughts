@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { SUPABASE_KEY, url, supabase } from './SupabaseKey'
 import '../components/LoginRegister.css';
 import InspoCard from "./InspoCard";
-import footerDesign from '../Assets/FooterDesign.png'
+import Footer from './Footer';
 
 
 const Login = () => {
@@ -94,9 +94,7 @@ const Login = () => {
                     <InspoCard author={author} quote={quote} />
                 </div>
             </div>
-            <footer className="footer">
-                <img src={footerDesign} />
-            </footer>
+            <Footer />
         </div >
     )
 };

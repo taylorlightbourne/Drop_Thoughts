@@ -12,5 +12,4 @@ export const Emotions = async (dispatch, url, response, created_at,e) => {
           body: JSON.stringify({url,response,created_at})
         }
   )
-  console.log(info.json)
 }

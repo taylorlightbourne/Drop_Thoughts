@@ -1,13 +1,46 @@
-/* .journalCardContainer{
-display: flex;
+@import url("https://fonts.googleapis.com/css2?family=Six+Caps&display=swap");
 
+.journalCardContainer {
+  display: flex;
+
+  margin-top: 20px;
 }
-.dateDiv{
-flex: 1; 
-border: white solid 2px;
-max-width: 135px;
+.dateDiv {
+  flex: 1;
+  border: #20df7f solid 1px;
+  max-width: 135px;
+  background-color: #20df802a;
+  margin-left: 50px;
 }
-.moodDiv{
-    flex: 1; 
-    border: white solid 2px;
-} */
+.moodDiv {
+  flex: 1;
+  border: #20df7f solid 1px;
+  background-color: #20df802a;
+  margin-right: 50px;
+}
+.dateDiv ul p {
+  text-align: center;
+  padding-top: 20px;
+  height: 75px;
+  border: #20df7f solid 1px;
+  color: white;
+  overflow: hidden;
+}
+.moodDiv ul p {
+  padding-top: 20px;
+  height: 75px;
+  border: #20df7f solid 1px;
+  color: white;
+  padding-left: 10px;
+  overflow: auto;
+}
+.main-JournalContainer {
+  margin-top: 50px;
+}
+.header {
+  padding-top: 13px;
+  color: white;
+  font-family: "Six Caps", sans-serif;
+  font-size: 40px;
+  letter-spacing: 3px;
+}

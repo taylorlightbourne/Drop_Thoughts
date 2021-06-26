@@ -1,0 +1,42 @@
+.parent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.headers {
+  color: #ffffff;
+  font-family: "Six caps", sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  font-weight: normal;
+  margin-top: 4%;
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 3%;
+}
+
+.tags {
+  text-decoration: none;
+  color: #20df7f;
+}
+
+h3 {
+  color: #ffffff;
+  margin-top: 2%;
+  font-family: "Lexend Deca", sans-serif;
+  text-align: center;
+}
+
+iframe {
+  display: flex;
+  justify-content: center;
+}

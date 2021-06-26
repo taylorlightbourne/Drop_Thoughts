@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import footerDesign from '../Assets/FooterDesign.png'
+import Footer from "./Footer";
 import { SUPABASE_KEY, url, supabase } from './SupabaseKey'
 import './LoginRegister.css';
 
@@ -77,9 +77,7 @@ const Register = () => {
                 </Link>
 
             </div>
-            <footer>
-                <img src={footerDesign} />
-            </footer>
+            <Footer />
         </div >
     )
 };

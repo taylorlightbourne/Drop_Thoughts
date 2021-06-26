@@ -118,8 +118,8 @@ export default function MoodChartApp() {
                 />
             </div>
             <div >
-                <footer className="moodChartFooter">
-                    <img src={footerDesign} />
+                <footer >
+                    <img className="moodChartFooter"  src={footerDesign} />
                 </footer>
             </div>
         </>

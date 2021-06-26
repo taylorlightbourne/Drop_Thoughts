@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Six+Caps&display=swap");
 
 .main-container {
   height: 100vh;
@@ -22,9 +23,17 @@
   flex-direction: column;
   align-items: center;
   color: #ffffff;
-  font-family: "Lexend Deca", sans-serif;
   font-weight: normal;
   line-height: 3rem;
+}
+.registerHeader h1 {
+  font-family: "Six Caps", sans-serif;
+  letter-spacing: 5px;
+  font-size: 50px;
+}
+.registerHeader p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: normal;
 }
 .loginHeader {
   display: flex;
@@ -36,11 +45,15 @@
   font-weight: normal;
   line-height: 3rem;
 }
-
-.head-of-page {
-  font-size: 3rem;
+.loginHeader h1 {
+  font-family: "Six Caps", sans-serif;
+  letter-spacing: 5px;
+  font-size: 50px;
 }
-
+.loginHeader p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: normal;
+}
 #link {
   color: #ffffff;
   text-decoration: none;
@@ -48,10 +61,6 @@
 }
 #link:active {
   color: #ffffff;
-}
-.footer {
-  width: 100%;
-  max-width: max-content;
 }
 form {
   line-height: 20px;
@@ -101,23 +110,17 @@ form {
   margin-top: 2%;
   font-size: 20px;
 }
-
-.text {
-  font-size: 1.5rem;
-}
-
 .already {
-  background: #20df7f;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  width: 250px;
-  height: 48px;
-  padding: 5px;
-  font-family: "Lexend Deca", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-transform: capitalize;
   text-decoration: none;
   color: #ffffff;
+}
+@media (max-width: 320px) {
+  .main-container {
+    height: 100vh;
+    background-color: #224957;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
