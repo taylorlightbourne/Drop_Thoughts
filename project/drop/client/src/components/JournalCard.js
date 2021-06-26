@@ -6,8 +6,20 @@ const JournalCard = (props) => {
 
     return (
         <>
-            <div className="journalDiv">
-                <p>{props.info.map(entry => entry.mood)}</p>
+            <div className="journalCardContainer">
+                <div className="dateDiv">
+                    <ul>
+                        {props.info.map((entry) => {
+                            return <p>{entry.Date}</p>})}
+                    </ul>
+                </div>
+                <div className="moodDiv">
+                    <ul>
+                        {props.info.map((entry) => {
+                            return <p>{entry.mood}</p>})}
+                            
+                    </ul>
+                </div>
             </div>
         </>
     )

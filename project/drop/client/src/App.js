@@ -8,15 +8,26 @@ import ErrorPage from './components/ErrorPage';
 import HelpPage from './components/HelpPage';
 import MoodChartApp from './components/MoodChart/MoodChartApp'
 import Journal from './components/Journal'
+import { ReactDOM } from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithubSquare, } from '@fortawesome/free-brands-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
 } from "react-router-dom";
+import React, { useState } from 'react'
 
+library.add(fab, faLinkedin, faGithubSquare, faLink)
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  const _toggleIsLoggedIn = () => setIsLoggedIn(!isLoggedIn)
+
   return (
     <div className="App">
       <Router>
@@ -57,13 +68,11 @@ function App() {
             <ErrorPage />
           </Route>
 
-          <Route path="*" >
+          <Route path="*">
             <Redirect to="/Error" />
           </Route>
-
         </Switch>
       </Router>
-
     </div>
   );
 }

@@ -1,13 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Six+Caps&display=swap");
+
 :root {
   --primary: #fff;
 }
 
 .btn {
-  padding: 8px 20px;
+  padding: 20px 20px;
   border-radius: 2px;
   outline: none;
   border: none;
   cursor: pointer;
+  text-align: center;
+  margin: 8px;
+  font-family: "Six Caps", sans-serif;
+  font-size: 2.2rem;
 }
 
 .btn--primary {
@@ -25,8 +31,9 @@
 }
 
 .btn--medium {
-  padding: 8px 20px;
-  font-size: 18px;
+  padding: 8px 10px;
+  font-size: 30px;
+  letter-spacing: 2.5px;
 }
 
 .btn--large {

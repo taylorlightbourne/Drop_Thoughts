@@ -53,50 +53,51 @@ const Login = () => {
             setUser(user.email);
             history.push('/')
         }
-        // localStorage.setItem("token", session.access_token);
     };
     return (
         <div className="main-container">
             <div className="main-contents">
-                <div className="header">
-                    <h1 id="login">Login</h1>
-                    <p id="p_notice">Please sign into your account.</p>
+                <div className="loginHeader">
+                    <h1 className="head-of-page">Login</h1>
+                    <p className="text">Please sign into your account.</p>
                 </div>
                 <br></br>
                 <form onSubmit={signIn}>
                     <div className="email__input">
-                        <input type="text" name="email" id="floatingInput" onChange={(e) =>
+                        <input placeholder="Email" type="text" name="email" id="floatingInput" onChange={(e) =>
                             setSignInUserFormData({
                                 ...signInUserFormData,
                                 [e.target.name]: e.target.value,
                             })
                         } required></input>
                     </div>
-                    <br></br>
+                    <br />
                     <div className="password__input">
-                        <input type="password" name="password" id="floatingInput" onChange={(e) =>
+                        <input placeholder="Password" type="password" name="password" id="floatingInput" onChange={(e) =>
                             setSignInUserFormData({
                                 ...signInUserFormData,
                                 [e.target.name]: e.target.value,
                             })
                         } required></input>
                     </div>
-                    <br></br>
+                    <br />
                     <div className="submit__btn">
                         <button type="submit" id="submit__btn">Login</button>
                     </div>
                 </form>
-                <Link to="/register">
+                <br />
+                <Link className="already" to="/register">
                     <p>New User? Create an Account Here</p>
                 </Link>
+                <br />
                 <div className="quoteAPI">
                     <InspoCard author={author} quote={quote} />
                 </div>
             </div>
-            <footer>
+            <footer className="footer">
                 <img src={footerDesign} />
             </footer>
-        </div>
+        </div >
     )
 };
 

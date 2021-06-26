@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Bar } from 'react-chartjs-2'
-
 import { supabase } from "../SupabaseKey"
+import "./MoodChart.css"
+import Navbar from '../Navbar'
+import footerDesign from '../../Assets/FooterDesign.png'
+
 export default function MoodChartApp() {
+
 
     const [mood, setMood] = useState([])
     const [moodObject, setMoodObject] = useState({})
@@ -33,7 +37,7 @@ export default function MoodChartApp() {
                 if (datum.respond === "Fear") {
                     fear.push(datum)
                 }
-                if (datum.respond === "Confidence") {
+                if (datum.respond === "Confident") {
                     confidence.push(datum)
                 }
 
@@ -55,59 +59,69 @@ export default function MoodChartApp() {
     const fearLength = moodObject.fear ? moodObject.fear.length : 0
     const confidenceLength = moodObject.confidence ? moodObject.confidence.length : 0
     const sadnessLength = moodObject.sadness ? moodObject.sadness.length : 0
+
     return (
+        <>
+            <div>
+                <Navbar />
+            </div>
+            <div className="chartHeader">
+                <h1 className="moodChartHeader">Mood Chart</h1>
+            </div>
 
-
-        < div >
-            <Bar
-                data={{
-                    labels: ['Joy', 'Anger', 'Fear', 'Confident', 'Sadness'],
-                    datasets: [
-                        {
-                            label: 'Your Mood',
-                            data: [joyLength,
-                                angerLength,
-                                fearLength,
-                                confidenceLength,
-                                sadnessLength],
-                            backgroundColor: [
-                                'rgba(255, 0, 0, 0.2)',
-                                'rgba(0, 0, 225, 0.2)',
-                                'rgba(255, 255, 0, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                            ],
-                            borderColor: [
-                                'rgba(255, 0, 0, 1)',
-                                'rgba(0, 0, 225, 1)',
-                                'rgba(255, 255, 0, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                            ],
-                            borderWidth: 2,
-                        },
-                    ],
-                }}
-                height={400}
-                width={600}
-                options={{
-                    maintainAspectRatio: false,
-                    scales: {
-                        yAxes: [
+            < div className="chartDiv" >
+                <Bar
+                    data={{
+                        labels: ['Joy', 'Anger', 'Fear', 'Confident', 'Sadness'],
+                        datasets: [
                             {
-                                ticks: {
-                                    beginAtZero: true,
-                                },
+                                label: 'Your Mood',
+                                data: [joyLength,
+                                    angerLength,
+                                    fearLength,
+                                    confidenceLength,
+                                    sadnessLength],
+                                backgroundColor: [
+                                    'rgba(173,255,47, 0.2)',
+                                    'rgba(255,0,0, 0.2)',
+                                    'rgba(255,140,0, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                ],
+                                borderColor: [
+                                    'rgba(173,255,47, 1)',
+                                    'rgba(255,0,0, 1)',
+                                    'rgba(255,140,0, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                ],
+                                borderWidth: 2,
                             },
                         ],
-                    },
-                    legend: {
-                        labels: {
-                            fontSize: 60,
+                    }}
+                    height={400}
+                    width={600}
+                    options={{
+
+                        maintainAspectRatio: false,
+                        scales: {
+                            yAxes: [
+                                {
+                                    ticks: {
+                                        beginAtZero: true,
+                                    },
+                                },
+                            ],
                         },
-                    },
-                }}
-            />
-        </div>
+
+                    }}
+                />
+            </div>
+            <div >
+                <footer className="moodChartFooter">
+                    <img src={footerDesign} />
+                </footer>
+            </div>
+        </>
     )
 }

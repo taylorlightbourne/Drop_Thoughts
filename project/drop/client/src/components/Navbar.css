@@ -1,14 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Six+Caps&display=swap");
+
 .navbar {
-  background: rgb(2, 2, 66);
+  background: #224957;
   height: 80px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 30px;
+  letter-spacing: 2.5px;
   position: fixed;
   top: 0;
   z-index: 999;
+  font-family: "Six Caps", sans-serif;
 }
 
 .navbar-container {
@@ -28,6 +32,10 @@
   font-size: 2rem;
   display: flex;
   align-items: center;
+}
+.navbar-logo img {
+  width: 75px;
+  height: 75px;
 }
 
 .fa-typo3 {
@@ -94,7 +102,7 @@
   }
 
   .nav-menu.active {
-    background: white;
+    background: #224957;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -106,11 +114,11 @@
     padding: 2rem;
     width: 100%;
     display: table;
-    color: rgb(2, 2, 66);
+    color: white;
   }
 
   .nav-links:hover {
-    background-color: rgb(2, 2, 66);
+    background-color: #224957;
     color: white;
     border-radius: 0;
   }
@@ -145,16 +153,16 @@
     width: 80%;
     text-decoration: none;
     font-size: 1.5rem;
-    background-color: rgb(2, 2, 66);
-    color: white;
+    background-color: #224957;
+    color: #224957;
     padding: 14px 20px;
-    border: 1px solid rgb(2, 2, 66);
+    border: 1px solid white;
     transition: all 0.3s ease-out;
   }
 
   .nav-links-mobile:hover {
-    background: white;
-    color: rgb(2, 2, 66);
+    background: #224957;
+    color: white;
     transition: 250ms;
   }
 }

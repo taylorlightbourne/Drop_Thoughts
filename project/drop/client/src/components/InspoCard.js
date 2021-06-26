@@ -9,8 +9,8 @@ const InspoCard = (props) => {
     return (
     <>
         <div className="quoteAPI">
-            <p>{props.quote}</p>
-            <p>- {props.author}</p>
+            <p className="text">{props.quote}</p>
+            <p className="text">- {props.author}</p>
         </div>
     </>
     )

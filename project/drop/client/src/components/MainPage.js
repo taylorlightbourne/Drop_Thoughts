@@ -2,20 +2,39 @@ import React from 'react';
 import { addMessage } from '../actions/messageAction'
 import { AnalyzeTone } from '../actions/ToneAction'
 import { useDispatch, useSelector } from 'react-redux'
-import { useState } from 'react'
+import { useHistory } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { SUPABASE_KEY, url, supabase } from './SupabaseKey'
 import { Emotions } from '../actions/SaveAction';
-
-
+import Navbar from './Navbar';
+import "./MainPage.css";
+import logo from "../Assets/DropThoughts.png";
 
 const MainPage = () => {
+
     const dispatch = useDispatch()
+    const history = useHistory();
     const text = useSelector((state) => state.Tone)
     const Response = useSelector(state => state.Respond)
-    console.log(Response)
-
     const [mood, setMood] = useState("")
     const [response, setResponse] = useState("")
+
+    const Disable =  () => {
+        let no = document.getElementById("noshow").disabled = true
+        document.getElementById("show").addEventListener("click", enable)
+        function enable() {
+            let no = document.getElementById("noshow").disabled = false
+            console.log('enabled')
+        }
+        if (document.getElementById("in") == "") {
+            let show = document.getElementById("show").disabled = true
+        }
+    };
+
+    useEffect(() => {
+        Disable();
+    }, []);
+
 
     const SupabaseSave = async () => {
         setResponse()
@@ -24,28 +43,32 @@ const MainPage = () => {
             .insert([
                 { mood: mood, respond: Response[0].computer.response, ai: Response[0].bot.ai }
             ])
+            history.push("/journal");
     };
+
     return (
-        <div className="main-container">
-            <div className="main contents">
-                <div className="header">
-                    <h1>Drop Thoughts</h1>
+        <div className="container">
+            <Navbar />
+            <div className="content">
+                <div className="top">
+                    <img alt=""
+                        src={logo} />
                 </div>
                 <div className="message__box">
-                    <input placeholder="How Are You Feeling Today?" name="url" onChange={(e) => setMood(e.target.value)}></input>
+                    <input placeholder="How Are You Feeling Today?" id="in" className="mood-checker" name="url" onChange={(e) => setMood(e.target.value)}></input>
                 </div>
-
-                <div className="submit__btn">
-                    <button type="button" id="submit__btn" onClick={(e) => AnalyzeTone(dispatch, mood)}>Submit</button>
-                </div>
-                <form>
-                    <div className="save__btn">
-                        <button type="button" id="save__btn" onClick={(e) => SupabaseSave()}>Save</button>
+                <div className="btnsContainer">
+                    <div className="main__btn">
+                        <button type="button" className="btn" id="show" onClick={(e) => AnalyzeTone(dispatch, mood)}>Send</button>
                     </div>
-
-                </form>
+                    <form>
+                        <div className="main__btn">
+                            <button type="button" className="btn" id="noshow" onClick={(e) => SupabaseSave()}>Save</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
+        </div >
 
     )
 };

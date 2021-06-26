@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    height: 100vh;
+    background-color: #224957;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.chartHeader{
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+}
+.moodChartFooter{
+        position:fixed;
+        bottom:0px;
+        width:100%;   
+}
+.moodChartHeader{
+    padding-bottom: 50px;
+    padding-top: 50px;
+    color: white;
+}

@@ -1,0 +1,81 @@
+.content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.top {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: normal;
+  line-height: 1rem;
+  font-size: 2rem;
+}
+
+.message__box {
+  text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+}
+input {
+  width: 400px;
+  height: 200px;
+  padding: 2rem;
+}
+.btnsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mood-checker {
+  font-size: 1.2rem;
+  width: 27%;
+  height: 10%;
+  padding: 2%;
+  padding-left: 4%;
+  border-radius: 0%;
+  border-style: none;
+  color: #224957;
+}
+input.mood-checker,
+textarea {
+  background: #20df7f;
+}
+
+.mood-checker:hover {
+  background-color: #20df7f;
+}
+
+.btn {
+  padding: 1rem;
+  color: #20df7f;
+  background-color: #224957;
+  padding: 5px;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+}
+
+.nobtn {
+  display: none;
+}
+
+@media only screen and (max-width: 200px) {
+  .top {
+    text-align: center;
+    color: #ffffff;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: normal;
+    line-height: 1rem;
+    font-size: 2rem;
+  }
+  img {
+    font-size: 50%;
+  }
+}
