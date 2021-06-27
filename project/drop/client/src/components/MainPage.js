@@ -55,7 +55,7 @@ const MainPage = () => {
                         src={logo} />
                 </div>
                 <div className="message__box">
-                    <input placeholder="How Are You Feeling Today?" id="in" className="mood-checker" name="url" onChange={(e) => setMood(e.target.value)}></input>
+                    <input maxLength="75" type="text" placeholder="How Are You Feeling Today?" id="in" className="mood-checker" name="url" onChange={(e) => setMood(e.target.value)}></input>
                 </div>
                 <div className="btnsContainer">
                     <div className="main__btn">

@@ -9,7 +9,6 @@ let response = ""
 let ai = ""
 
 export const AnalyzeTone = async (dispatch, payload) => {
-  
 
   const URL = `https://api.us-east.tone-analyzer.watson.cloud.ibm.com/instances/8ef3ba6c-91c0-43bf-937f-d80ba8fa9d90/v3/tone?version=2017-09-21&text=${payload}`
 
@@ -19,7 +18,7 @@ export const AnalyzeTone = async (dispatch, payload) => {
     headers: {
       "Accept": "application/json",
       "Content-Type": "text/plain",
-      "Authorization": `Basic YXBpa2V5OkkxMlBWa24yMVBnMnRjN1NIWnZfeEpfY3pYQ19maUNscDQyeEJWTGdUVldH`
+      "Authorization": `Basic ${API_KEY}`
     }
   });
   const results = await analyze.json();
@@ -40,6 +39,7 @@ export const AnalyzeTone = async (dispatch, payload) => {
   } else {
     ai = "Hmmm a interesting response 🤨"
   }
+  console.log(response)
   dispatch({ type: Send_Back_Response, payload: { computer: { response }, bot: { ai } } })
   dispatch({ type: Get_Message, payload: { userMessage: payload } })
   alert("Emotion Sent");

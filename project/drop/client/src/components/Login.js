@@ -6,6 +6,7 @@ import { SUPABASE_KEY, url, supabase } from './SupabaseKey'
 import '../components/LoginRegister.css';
 import InspoCard from "./InspoCard";
 import Footer from './Footer';
+import box from '../Assets/DropThoughtsBox.png'
 
 
 const Login = () => {
@@ -57,6 +58,10 @@ const Login = () => {
     return (
         <div className="main-container">
             <div className="main-contents">
+                <div>
+                <img src={box} alt=""></img>
+                </div>
+                <br/>
                 <div className="loginHeader">
                     <h1 className="head-of-page">Login</h1>
                     <p className="text">Please sign into your account.</p>
@@ -94,7 +99,6 @@ const Login = () => {
                     <InspoCard author={author} quote={quote} />
                 </div>
             </div>
-            <Footer />
         </div >
     )
 };

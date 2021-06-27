@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Footer from "./Footer";
 import { SUPABASE_KEY, url, supabase } from './SupabaseKey'
 import './LoginRegister.css';
+import logo from "../Assets/DropThoughts.png";
 
 
 
@@ -41,6 +42,10 @@ const Register = () => {
     return (
         <div className="main-container">
             <div className="main-contents">
+                <div className="top">
+                    <img alt=""
+                        src={logo} />
+                        </div>
                 <div className="registerHeader">
                     <h1>Sign Up</h1>
                     <p>Please fill in this form to create an account.</p>
@@ -77,7 +82,6 @@ const Register = () => {
                 </Link>
 
             </div>
-            <Footer />
         </div >
     )
 };

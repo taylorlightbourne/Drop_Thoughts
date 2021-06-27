@@ -38,28 +38,26 @@ export default function HelpPage() {
           </div>
 
           <div className="inperson">
-          <h2 className="header">In Person</h2>
-          <h3>For inperson substance and mental health assistance!</h3>
-            
-            
+            <h2 className="headers">In Person</h2>
+            <h3>For inperson substance and mental health assistance!</h3>
           </div>
           <br></br>
-            <iframe
-              allowtransparency="true"
-              frameborder="0"
-              height="130"
-              id="mentalhealthtreatmentfinder"
-              marginheight="0"
-              marginwidth="0"
-              name="mentalhealthtreatmentfinder"
-              scrolling="no"
-              src="https://findtreatment.samhsa.gov/locator/widget/170"
-              title="Samhsa.gov"
-              width="170"
-            >
-              {" "}
-              https://findtreatment.samhsa.gov/locator/widget/170{" "}
-            </iframe>
+          <iframe
+            allowtransparency="true"
+            frameborder="0"
+            height="220"
+            id="mentalhealthtreatmentfinder"
+            marginheight="0"
+            marginwidth="0"
+            name="mentalhealthtreatmentfinder"
+            scrolling="no"
+            src="https://findtreatment.samhsa.gov/locator/widget/220"
+            title="Samhsa.gov"
+            width="220"
+          >
+            {" "}
+            https://findtreatment.samhsa.gov/locator/widget/220{" "}
+          </iframe>
         </div>
       </div>
     );
