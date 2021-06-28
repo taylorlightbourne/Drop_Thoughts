@@ -18,3 +18,7 @@ Team members:
 * Taylor Lightbourne
 * Nischal Pahari
 * Phillip Francis
+
+![image](https://user-images.githubusercontent.com/79942688/123708730-e87a5980-d839-11eb-8743-185ae47c4d57.png)
+
+![image](https://user-images.githubusercontent.com/79942688/123708596-b36e0700-d839-11eb-9333-13c3dbc7ea7a.png)
